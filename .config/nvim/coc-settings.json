@@ -1,0 +1,5 @@
+{
+  "python.jediEnabled": false,
+  "coc.preferences.extensionUpdateCheck": "never",
+  "coc.preferences.formatOnSaveFiletypes": ["css", "javascript", "typescript","typescriptreact", "jsx"]
+}
