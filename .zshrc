@@ -1,28 +1,47 @@
+# # Option for something like 'rm -r !("delete-all-but-this.txt")' to work
+# setopt no_bare_glob_qual
 alias dn='dotnet'
 alias newCPP='sh $HOME/.scripts/newCPP/newCPP.sh'
 alias reactComponent='sh $HOME/.scripts/reactComponent/reactComponent.sh'
-alias python='python3'
+#alias python='python3'
 alias pip='pip3'
 alias dj='python manage.py'
 alias rust='rustup'
 alias integra='gcloud beta compute ssh --zone "southamerica-east1-b" "integra-cms" --project "integra-274519"'
 alias rn='npx react-native'
 alias scrcpy=' ADB=$HOME/Android/Sdk/platform-tools/adb scrcpy'
-synclient VertScrollDelta=-30
-synclient HorizScrollDelta=-30
+alias virtualenv='python3 -m venv'
+alias vim="nvim"
+
+# Git aliases
+alias gfa="git fetch --all --tags --prune"
+alias gff="git merge --ff-only"
+alias gs="git status"
+alias git-conflicts="grep -L '<<<<' *(.)"
+
+
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Golang env variables
+export GOBIN="/home/guille/go/bin"
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/guille/.oh-my-zsh"
-
+export FZF_DEFAULT_COMMAND="fdfind --type f --hidden --follow --exclude .git --exclude node_modules"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="clean"
+
+# File listing aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -81,17 +100,23 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode)
+plugins=(git vi-mode nvm)
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export ANDROID_HOME=$HOME/Android/Sdk
+export DENO_INSTALL="/home/guille/.deno"
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/home/guille/go/bin
+export PATH=$PATH:$DENO_INSTALL/bin
+export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/haskell-server
+
 
 source $ZSH/oh-my-zsh.sh
 
