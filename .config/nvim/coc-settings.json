@@ -1,5 +1,23 @@
 {
   "python.jediEnabled": false,
-  "coc.preferences.extensionUpdateCheck": "never",
-  "coc.preferences.formatOnSaveFiletypes": ["css", "javascript", "typescript","typescriptreact", "jsx"]
+  "coc.preferences.formatOnSaveFiletypes": ["css", "javascript", "typescript","typescriptreact", "jsx"],
+  "languageserver": {
+    "haskell": {
+      "command": "haskell-language-server-wrapper",
+      "args": ["--lsp"],
+      "filetypes":["hs", "lhs", "haskell"],
+      "rootPatterns":[
+        ".stack.tml",
+        ".hie-bios",
+        "BUILD.bazel",
+        "cabal.config",
+        "package.yaml"
+      ]
+    },
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git", ".hg"],
+      "filetypes": ["go"]
+    }
+  }
 }

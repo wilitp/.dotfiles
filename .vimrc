@@ -16,6 +16,18 @@ set noswapfile
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
+let g:clipboard = {
+  \ 'name': 'win32yank-wsl',
+  \ 'copy': {
+  \ '+': 'win32yank.exe -i -crlf',
+  \ '*': 'win32yank.exe -i -crlf',
+  \ },
+  \ 'paste': {
+  \ '+': 'win32yank.exe -i -lf',
+  \ '*': 'win32yank.exe -i -lf',
+  \ },
+  \ 'cache_enabled': 0,
+  \ }
 
 call plug#begin('~/.vim/plugged')
 
@@ -44,19 +56,21 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-commentary'
 
+" Svelte syntax highlight
+Plug 'leafOfTree/vim-svelte-plugin'
 
 "File Tree
 Plug 'preservim/nerdtree'
 
 "Ts syntax
-Plug 'HerringtonDarkholme/yats.vim'
+" Plug 'HerringtonDarkholme/yats.vim'
 
 " Styled components
-" Plug 'styled-components/vim-styled-components', { 'branch': 'develop' }
+Plug 'styled-components/vim-styled-components', { 'branch': 'develop' }
 
 
 " Language support
-Plug 'pangloss/vim-javascript'    " JavaScript support
+"Plug 'pangloss/vim-javascript'    " JavaScript support
 Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
 Plug 'jparise/vim-graphql'        " GraphQL syntax
@@ -73,7 +87,7 @@ Plug 'junegunn/fzf', {'do': { -> fzf#install()}}
 call plug#end()
 
 " coc config
-let g:coc_global_extensions = [ 'coc-css', 'coc-pyright', 'coc-tailwindcss', 'coc-tslint', 'coc-prettier', 'coc-emmet', 'coc-pairs', 'coc-tsserver', 'coc-phpls']
+let g:coc_global_extensions = ['coc-styled-components', 'coc-css', 'coc-pyright', 'coc-tailwindcss', 'coc-tslint', 'coc-prettier', 'coc-emmet', 'coc-pairs', 'coc-tsserver', 'coc-phpls', 'coc-svelte']
 
 " Remap for rename current word
 nmap <F2> <Plug>(coc-rename)
@@ -123,3 +137,5 @@ endfunction
 augroup filetypedetect
   au! BufRead, BufNewFile * call DetectGoHtmlTmlp()
 augroup END
+
+
