@@ -16,19 +16,6 @@ set noswapfile
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
-let g:clipboard = {
-  \ 'name': 'win32yank-wsl',
-  \ 'copy': {
-  \ '+': 'win32yank.exe -i -crlf',
-  \ '*': 'win32yank.exe -i -crlf',
-  \ },
-  \ 'paste': {
-  \ '+': 'win32yank.exe -i -lf',
-  \ '*': 'win32yank.exe -i -lf',
-  \ },
-  \ 'cache_enabled': 0,
-  \ }
-
 call plug#begin('~/.vim/plugged')
 
 " Fancy status bar
@@ -47,6 +34,7 @@ Plug 'mhinz/vim-signify'
 
 " Themes
 Plug 'joshdick/onedark.vim'
+Plug 'morhetz/gruvbox'
 
 " Autocompletion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -63,14 +51,17 @@ Plug 'leafOfTree/vim-svelte-plugin'
 Plug 'preservim/nerdtree'
 
 "Ts syntax
-" Plug 'HerringtonDarkholme/yats.vim'
+Plug 'HerringtonDarkholme/yats.vim'
+
+" Vim syntax highlight
+Plug 'posva/vim-vue'
 
 " Styled components
-Plug 'styled-components/vim-styled-components', { 'branch': 'develop' }
+" Plug 'styled-components/vim-styled-components', { 'branch': 'develop' }
 
 
 " Language support
-"Plug 'pangloss/vim-javascript'    " JavaScript support
+Plug 'pangloss/vim-javascript'    " JavaScript support
 Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
 Plug 'jparise/vim-graphql'        " GraphQL syntax
@@ -84,10 +75,16 @@ Plug 'hrsh7th/vim-vsnip-integ'
 " Fuzzy finder
 Plug 'junegunn/fzf', {'do': { -> fzf#install()}}
 
+" Snippets
+Plug 'SirVer/ultisnips'
+Plug 'mlaursen/vim-react-snippets'
 call plug#end()
 
+" vim-svelte var for typescript
+let g:vim_svelte_plugin_use_typescript = 1
+
 " coc config
-let g:coc_global_extensions = ['coc-styled-components', 'coc-css', 'coc-pyright', 'coc-tailwindcss', 'coc-tslint', 'coc-prettier', 'coc-emmet', 'coc-pairs', 'coc-tsserver', 'coc-phpls', 'coc-svelte']
+let g:coc_global_extensions = ['coc-styled-components', 'coc-css', 'coc-pyright', 'coc-tailwindcss', 'coc-tslint', 'coc-prettier', 'coc-emmet', 'coc-pairs', 'coc-tsserver', 'coc-phpls', 'coc-svelte', 'coc-vetur']
 
 " Remap for rename current word
 nmap <F2> <Plug>(coc-rename)
@@ -95,7 +92,8 @@ nmap <F2> <Plug>(coc-rename)
 " Activate bracket pair colors
 let g:rainbow_active = 1
 
-colorscheme onedark
+" colorscheme onedark
+colorscheme gruvbox
 
 
 
@@ -119,7 +117,8 @@ map <C-n> :NERDTreeToggle<CR>
 let NERDTreeMinimalUI=1
 
 
-let g:gruvbox_contrast_dark = "dark"
+let g:gruvbox_contrast_dark = "hard"
+
 autocmd FileType javascriptreact let b:coc_pairs_disabled = ['<']
 autocmd FileType typescript let b:coc_pairs_disabled = ['<']
 let g:user_emmet_settings = {
