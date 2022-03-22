@@ -1,6 +1,5 @@
 {
-  "python.jediEnabled": false,
-  "coc.preferences.formatOnSaveFiletypes": ["css", "javascript", "typescript","typescriptreact", "jsx"],
+  "coc.preferences.formatOnSaveFiletypes": ["scss", "css", "javascript", "typescript", "python", "javascriptreact", "typescriptreact", "html"],
   "languageserver": {
     "haskell": {
       "command": "haskell-language-server-wrapper",
@@ -18,6 +17,19 @@
       "command": "gopls",
       "rootPatterns": ["go.mod", ".vim/", ".git", ".hg"],
       "filetypes": ["go"]
+    },
+    "ccls": {
+      "command": "ccls",
+      "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
+      "rootPatterns": [".ccls-root", "compile_commands.json"],
+      "initializationOptions": {
+        "cache": {
+          "directory": ".ccls-cache"
+        },
+        "client": {
+          "snippetSupport": true
+        }
+      }
     }
   }
 }
