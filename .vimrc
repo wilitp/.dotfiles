@@ -76,8 +76,8 @@ Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'junegunn/fzf', {'do': { -> fzf#install()}}
 
 " Snippets
-Plug 'SirVer/ultisnips'
-Plug 'mlaursen/vim-react-snippets'
+" Plug 'SirVer/ultisnips'
+" Plug 'mlaursen/vim-react-snippets'
 call plug#end()
 
 " vim-svelte var for typescript
