@@ -129,8 +129,4 @@ if [ ! "$ZSH_THEME" = ""  ]; then
   fi
 fi
 
-
-#Alias mios
-alias l="ls -CF"
-alias la="ls -A"
-alias ll="ls -alF"
+source ~/.oh-my-zsh/alias.sh

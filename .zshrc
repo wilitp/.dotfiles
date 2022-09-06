@@ -22,7 +22,7 @@ alias rpaney='tmux resize-pane -y'
 alias pastewin="powershell.exe Get-Clipboard"
 
 # Git aliases
-alias gfa="git fetch --all --tags --prune"
+alias gfa="git fetch --all --tags"
 alias gff="git merge --ff-only"
 alias gnff="git merge --no-ff"
 alias gs="git status"
@@ -31,6 +31,7 @@ alias git-conflicts="grep -L '<<<<' *(.)"
 
 # ssh
 alias omxstaging="ssh -a fran@66.97.36.45 -p 5262 -L 8015:127.0.0.1:8005 -L 8013:127.0.0.1:8003 -L 9015:127.0.0.1:9005 -L 9013:127.0.0.1:9003"
+# alias omxstaging="ssh -a fran@66.97.34.242 -p 5262 -L 8015:127.0.0.1:8005 -L 8013:127.0.0.1:8003 -L 9015:127.0.0.1:9005 -L 9013:127.0.0.1:9003"
 
 
 # If you come from bash you might have to change your $PATH.
