@@ -1,7 +1,7 @@
 # # Option for something like 'rm -r !("delete-all-but-this.txt")' to work
 # setopt no_bare_glob_qual
 alias dn='dotnet'
-alias dc='docker-compose'
+alias dc='docker compose'
 alias newCPP='sh $HOME/.scripts/newCPP/newCPP.sh'
 alias reactComponent='sh $HOME/.scripts/reactComponent/reactComponent.sh'
 #alias python='python3'
