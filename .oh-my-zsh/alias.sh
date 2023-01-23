@@ -5,9 +5,9 @@ alias la="ls -A"
 alias ll="ls -alF"
 alias gfa="git fetch --all --tags --jobs=10"
 
-
 alias dn='dotnet'
-alias dc='docker-compose'
+alias dc='docker compose'
+alias dclogs='docker compose logs --tail 20 -f'
 alias newCPP='sh $HOME/.scripts/newCPP/newCPP.sh'
 alias reactComponent='sh $HOME/.scripts/reactComponent/reactComponent.sh'
 #alias python='python3'
@@ -37,3 +37,4 @@ alias git-conflicts="grep -L '<<<<' *(.)"
 
 # ssh
 alias omxstaging="ssh -a fran@66.97.36.45 -p 5262 -L 8015:127.0.0.1:8005 -L 8013:127.0.0.1:8003 -L 9015:127.0.0.1:9005 -L 9013:127.0.0.1:9003"
+alias omxstaging2="ssh -a fran@200.58.98.63 -p 5557 -L 8015:127.0.0.1:8005 -L 8013:127.0.0.1:8003 -L 9015:127.0.0.1:9005 -L 9013:127.0.0.1:9003"
