@@ -97,6 +97,7 @@ export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/haskell-server
 export PATH=$PATH:$HOME/.win32yank
 export PATH=$PATH:$HOME/flutter/bin
+export PATH=$PATH:$HOME/.pub-cache/bin
 
 
 source $ZSH/oh-my-zsh.sh
