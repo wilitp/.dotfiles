@@ -79,7 +79,7 @@ alias l='ls -CF'
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode nvm)
+plugins=(git vi-mode nvm asdf zsh-autosuggestions)
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -133,3 +133,23 @@ export EDITOR='nvim'
 HOME=${HOME:-'/home/guille'}
 export PATH="$HOME/"'.platformsh/bin':"$PATH"
 if [ -f "$HOME/"'.platformsh/shell-config.rc' ]; then . "$HOME/"'.platformsh/shell-config.rc'; fi # END SNIPPET
+
+# pnpm
+export PNPM_HOME="/home/guille/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# bun completions
+[ -s "/home/guille/.bun/_bun" ] && source "/home/guille/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+[ -f "/home/guille/.ghcup/env" ] && . "/home/guille/.ghcup/env" # ghcup-env
+
+# poner en el entorno el socket de ssh-agent de gnome
+export $(gnome-keyring-daemon -s)

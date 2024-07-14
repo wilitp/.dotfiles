@@ -38,5 +38,14 @@ alias git-conflicts="grep -L '<<<<' *(.)"
 
 # ssh
 alias omxstaging="ssh -a fran@66.97.36.45 -p 5262 -L 8015:127.0.0.1:8005 -L 8013:127.0.0.1:8003 -L 9015:127.0.0.1:9005 -L 9013:127.0.0.1:9003"
-alias omxstaging2="ssh -a fran@200.58.98.63 -p 5557 -L 8015:127.0.0.1:8005 -L 8013:127.0.0.1:8003 -L 9015:127.0.0.1:9005 -L 9013:127.0.0.1:9003"
+alias omxstaging2="ssh -a staging@200.58.98.63 -p 5557 -L 8015:127.0.0.1:8005 -L 8013:127.0.0.1:8003 -L 9015:127.0.0.1:9005 -L 9013:127.0.0.1:9003"
 alias omxbccba="ssh -i ~/.ssh/bcc-clima-vm-prd fferraro@bcc-clima-prd.eastus2.cloudapp.azure.com"
+alias omxnew="ssh -p 5942 omixom@vps-1527284-x.dattaweb.com -i .ssh/id_rsa -L 9017:127.0.0.1:9017"
+
+alias prenota="ssh prenotadev@181.13.244.221 -p 5700 -i ~/.ssh/id_rsa -L 5555:localhost:5555" 
+
+# utilities
+
+alias j='cd $(find . -type d -print | fzf)'
+
+alias limitmem='systemd-run --scope -p MemoryMax=1.5G --user '
