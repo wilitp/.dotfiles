@@ -152,4 +152,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 [ -f "/home/guille/.ghcup/env" ] && . "/home/guille/.ghcup/env" # ghcup-env
 
 # poner en el entorno el socket de ssh-agent de gnome
-export $(gnome-keyring-daemon -s)
+# export $(gnome-keyring-daemon -s)

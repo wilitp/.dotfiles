@@ -4,7 +4,6 @@
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
 
-
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.lsp.automatic_servers_installation = false
