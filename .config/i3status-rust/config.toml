@@ -30,7 +30,7 @@ block = "battery"
 
 [[block]]
 block = "memory"
-format = " $icon $mem_used.eng(w:3) $icon_swap $swap_used.eng(w:3) (z $zswap_decompressed.eng(w:3)) $zswap_comp_ratio:1"
+format = " $icon  $mem_used.eng(w:3) $icon_swap $swap_used.eng(w:3) (z $zswap_decompressed.eng(w:3)) $zswap_comp_ratio:1"
 
 
 [[block]]
