@@ -1,0 +1,4 @@
+idd=$(xinput --list | grep -i 'touchpad' | awk '{print $6}'| cut -d'=' -f2)
+
+xinput --set-prop $idd "libinput Tapping Enabled" 1
+xinput --set-prop $idd "libinput Natural Scrolling Enabled" 1
