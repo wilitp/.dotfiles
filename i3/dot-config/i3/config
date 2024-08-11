@@ -11,10 +11,14 @@
 
 # -- GAPS -------------
 
-gaps inner 5
+gaps inner 10
 
 
 # -- WINDOW STYLES ----------
+
+# For each window of class "whatever class", remove its border
+# for_window <criteria> <command>
+for_window [class="^.*"] border pixel 0
 
 set $bgColorFocused #3c3836
 set $colorFocused #d79921
