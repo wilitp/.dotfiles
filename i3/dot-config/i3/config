@@ -302,5 +302,8 @@ bindsym --no-startup-id exec flameshot &!
 # -- THEME -------------
 exec --no-startup-id exec picom -GCb --backend glx
 
+# -- Network Manager Applet
+exec --no-startup-id exec nm-applet --sm-disable &
+
 # -- WALLPAPER(PAPEL TAPIZ) -------------
 exec --no-startup-id exec feh --bg-max ~/.config/i3/wallpaper.jpg
