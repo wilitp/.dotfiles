@@ -300,7 +300,7 @@ bindsym $mod+m mode "monitors"
 bindsym --no-startup-id exec flameshot &!
 
 # -- THEME -------------
-exec --no-startup-id exec picom -CGb
+exec --no-startup-id exec picom -GCb --backend glx
 
 # -- WALLPAPER(PAPEL TAPIZ) -------------
 exec --no-startup-id exec feh --bg-max ~/.config/i3/wallpaper.jpg
