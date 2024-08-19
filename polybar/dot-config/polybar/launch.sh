@@ -13,12 +13,16 @@ echo "---" | tee -a /tmp/polybar1.log /tmp/polybar2.log
 
 echo "Bars launched..."
 
+# set battery and adapter
+BAT=$(ls /sys/class/power_supply  | grep BAT)
+AD=$(ls /sys/class/power_supply  | grep AD)
+
 if type "xrandr"; then
   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
     logfile="/tmp/polybar$m.log"
     echo "---" >> $logfile
     echo $logfile
-    MONITOR=$m polybar example 2>&1 | tee -a $logfile & disown
+    BATTERY=$BAT ADAPTER=$AD MONITOR=$m polybar example 2>&1 | tee -a $logfile & disown
   done
 else
   polybar --reload example & disown
