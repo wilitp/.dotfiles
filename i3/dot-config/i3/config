@@ -300,7 +300,7 @@ bindsym $mod+m mode "monitors"
 exec_always --no-startup-id exec flameshot &!
 
 # -- THEME -------------
-exec --no-startup-id exec picom -GCb --backend glx
+exec --no-startup-id exec picom
 
 # -- Network Manager Applet
 exec --no-startup-id exec nm-applet --sm-disable &
