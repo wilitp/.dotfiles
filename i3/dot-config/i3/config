@@ -306,4 +306,4 @@ exec_always --no-startup-id exec picom
 exec --no-startup-id exec nm-applet --sm-disable &
 
 # -- WALLPAPER(PAPEL TAPIZ) -------------
-exec_always --no-startup-id exec feh --bg-max ~/.config/i3/wallpaper.jpg
+exec_always --no-startup-id exec feh --bg-fill ~/.config/i3/wallpaper.jpg
