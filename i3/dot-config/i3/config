@@ -26,7 +26,7 @@ set $colorFocused #d79921
 set $bgColorUnfocused #333333DD
 set $colorUnfocused #eee
 # <colorclass> <border> <background> <text> <indicator> <child_border>
-client.focused $borderColorFocused $bgColorFocused $colorFocused #2e9ef4 $bgColorFocused
+client.focused $bgColorFocused $bgColorFocused $colorFocused #2e9ef4 $borderColorFocused
 client.unfocused $bgColorUnfocused $bgColorUnfocused $colorUnfocused #2e9ef4 $bgColorUnfocused
 
 set $mod Mod4
