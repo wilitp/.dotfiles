@@ -11,20 +11,22 @@
 
 # -- GAPS -------------
 
-gaps inner 10
+gaps inner 5
 
 
 # -- WINDOW STYLES ----------
 
 # For each window of class "whatever class", remove its border
 # for_window <criteria> <command>
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 1
 
 set $bgColorFocused #3c3836
+set $borderColorFocused #F0C674
 set $colorFocused #d79921
 set $bgColorUnfocused #333333DD
 set $colorUnfocused #eee
-client.focused $bgColorFocused $bgColorFocused $colorFocused #2e9ef4 $bgColorFocused
+# <colorclass> <border> <background> <text> <indicator> <child_border>
+client.focused $borderColorFocused $bgColorFocused $colorFocused #2e9ef4 $bgColorFocused
 client.unfocused $bgColorUnfocused $bgColorUnfocused $colorUnfocused #2e9ef4 $bgColorUnfocused
 
 set $mod Mod4
