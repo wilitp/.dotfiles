@@ -149,3 +149,7 @@ modes: "window,drun,run,ssh,filebrowser";
       sorting-method:    "name";
   }
 }
+//@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
+//@theme "/usr/share/rofi/themes/iggy.rasi"
+//@theme "/usr/share/rofi/themes/gruvbox-common.rasi"
+@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
